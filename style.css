@@ -1,3 +1,43 @@
-* {
-  color: red;
+#wrapper{
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #1C8B85;
+}
+
+header{
+  background-color: #003166;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+#profilePic {
+  width: 128px;
+  height: 128px;
+  padding-right: 10px;
+  float: left;
+}
+
+#aboutMe{
+  width: 70%;
+}
+
+#myGoals{
+  clear: both;
+  width: 60%;
+  margin: 2%;
+}
+
+#gameAnswers{
+  width: 60%;
+  margin: 2%;
+  margin-top: 500px;
+}
+
+h1, h2, h3 {
+    color: #C0C0C0;
+    text-decoration: underline;
 }

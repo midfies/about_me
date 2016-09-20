@@ -25,8 +25,8 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = \'' + reallyMe + '\' in response to: ' + q1);
-  
+  console.log('Q1 - User answer = \'' + reallyMe + '\' in response to: ' + q1);
+
 
 
 //Question 2 - Was I in the airforce?
@@ -43,7 +43,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = \'' + militaryBranch + '\' in response to: ' + q2);
+  console.log('Q2 - User answer = \'' + militaryBranch + '\' in response to: ' + q2);
 
 
 
@@ -61,7 +61,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = \'' + dutyStation + '\' in response to: ' + q3);
+  console.log('Q3 - User answer = \'' + dutyStation + '\' in response to: ' + q3);
 
 
 
@@ -79,7 +79,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = \'' +  deployments + '\' in response to: ' + q4);
+  console.log('Q4 - User answer = \'' +  deployments + '\' in response to: ' + q4);
 
 
 
@@ -97,4 +97,4 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = \'' + embassyWork + '\' in response to: ' + q5);
+  console.log('Q5 - User answer = \'' + embassyWork + '\' in response to: ' + q5);
