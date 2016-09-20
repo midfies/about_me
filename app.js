@@ -1,5 +1,6 @@
 "use strict";
 
+//variables for questions and badInput
 var q1 = 'Do you think this is really Marc?';
 var q2 = 'Do you think I served in the Air Force?';
 var q3 = 'Was I stationed in North Carolina?';
@@ -7,8 +8,11 @@ var q4 = 'I deployed to Afghanistan twice! Do you believe me?';
 var q5 = 'Would you believe I worked in the US Embassy in El Salvador?';
 var badInput = 'You obviously don\'t know how to follow instructions! Next Question!'
 
+//Alert to user to set up guessing game
+alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer the questions!  \'Y\' or \'N\' will work too!')
+
 //Question 1 - Do yo think it is me?
-  var reallyMe = prompt('Welcome to my page! ' + q1);
+  var reallyMe = prompt(q1);
   //if user guessed yes or y
   if ((reallyMe === 'y') || (reallyMe === 'yes')){
     alert('You are correct! It is me!!');
