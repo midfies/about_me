@@ -25,8 +25,12 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = ' + reallyMe.toUpperCase() + ' in response to: ' + q1);
-
+  if (!null){
+    console.log('User answer = \'' + reallyMe + '\' in response to: ' + q1);
+  }
+  else{
+    console.log('User cancelled game at: ' + q1);
+  }
 
 
 //Question 2 - Was I in the airforce?
@@ -43,7 +47,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = ' + militaryBranch.toUpperCase() + ' in response to: ' + q2);
+  console.log('User answer = \'' + militaryBranch + '\' in response to: ' + q2);
 
 
 
@@ -61,7 +65,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = ' + dutyStation.toUpperCase() + ' in response to: ' + q3);
+  console.log('User answer = \'' + dutyStation + '\' in response to: ' + q3);
 
 
 
@@ -79,7 +83,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = ' + deployments.toUpperCase() + ' in response to: ' + q4);
+  console.log('User answer = \'' +  deployments + '\' in response to: ' + q4);
 
 
 
@@ -97,4 +101,4 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  console.log('User answer = ' + embassyWork.toUpperCase() + ' in response to: ' + q5);
+  console.log('User answer = \'' + embassyWork + '\' in response to: ' + q5);
