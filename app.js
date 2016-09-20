@@ -25,12 +25,8 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
   else{
     alert(badInput);
   }
-  if (!null){
-    console.log('User answer = \'' + reallyMe + '\' in response to: ' + q1);
-  }
-  else{
-    console.log('User cancelled game at: ' + q1);
-  }
+  console.log('User answer = \'' + reallyMe + '\' in response to: ' + q1);
+  
 
 
 //Question 2 - Was I in the airforce?
