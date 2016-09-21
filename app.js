@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 //variables for questions and badInput
 var q1 = 'Do you think this is really Marc?';
@@ -12,7 +12,7 @@ var badInput = 'You obviously don\'t know how to follow instructions! Next Quest
 alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer the questions!  \'Y\' or \'N\' will work too!')
 
 //Question 1 - Do yo think it is me?
-  var reallyMe = prompt(q1);
+  var reallyMe = prompt(q1).toLowerCase();
   //if user guessed yes or y
   if ((reallyMe === 'y') || (reallyMe === 'yes')){
     alert('You are correct! It is me!!');
@@ -30,7 +30,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
 
 
 //Question 2 - Was I in the airforce?
-  var militaryBranch = prompt(q2);
+  var militaryBranch = prompt(q2).toLowerCase();
   //if user guessed yes or y
   if ((militaryBranch === 'y') || (militaryBranch === 'yes')){
     alert('Nope!  I served in the US Army!');
@@ -48,7 +48,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
 
 
 //Question 3 - Was I stationed in North Carolina?
-  var dutyStation = prompt(q3);
+  var dutyStation = prompt(q3).toLowerCase();
   //if user guessed yes or y
   if ((dutyStation === 'y') || (dutyStation === 'yes')){
     alert('Fort Bragg IS in North Carolina... Well Done!');
@@ -66,7 +66,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
 
 
 //Question 4 - I deployed to Afghanistan twice! Do you believe me?
-  var deployments = prompt(q4);
+  var deployments = prompt(q4).toLowerCase();
   //if user guessed yes or y
   if ((deployments === 'y') || (deployments === 'yes')){
     alert('How did you know the correct answer?');
@@ -84,7 +84,7 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
 
 
 //Question 5 - Would you believe I worked in the US Embassy in El Salvador?
-  var embassyWork = prompt(q5);
+  var embassyWork = prompt(q5).toLowerCase();
   //if user guessed yes or y
   if ((embassyWork === 'y') || (embassyWork === 'yes')){
     alert('You are wise to believe me but this is not true!  I worked at the Embassy in Guatemala!');
