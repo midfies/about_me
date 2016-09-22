@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Lab 2</title>
+  <title>Code 201 - About Me</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <!-- end of head -->
@@ -11,6 +11,13 @@
   <div id="wrapper">
     <header>
       <h1>About Me</h1>
+      <aside id="contactInfo">
+          <ul>
+            <li>Marc Warren Fieser</li>
+            <li>midfies@gmail.com</li>
+            <li>(206)276-8516</li>
+          </ul>
+      </aside>
     </header>
     <div id="content">
 
@@ -22,31 +29,81 @@
 
       <section id="aboutMe">
         <h3>My story</h3>
-          <p>Hello, My name is Marc Fieser.  I was born and raised in Woodinville,
-            Washington and graduated from Woodinville Highschool in 2003.  A year
-            later, I joined the US Army and served for nine years until June of 2013.
-            After completing my time in service, I returned home and attended the
-            University of Washington utilizing my GI Bill and I graduated and received my
-            degree in computer science and software enginnering in june of 2013.
-            I am Now a student at code fellows where I am learning to develop
-            web applications.</p>
+        <p>Hello, My name is Marc Fieser.  I was born and raised in Woodinville,
+          Washington and graduated from Woodinville Highschool in 2003.  A year
+          later, I joined the US Army and served for nine years until June of 2013.
+          After completing my time in service, I returned home and attended the
+          University of Washington utilizing my GI Bill and I graduated and received my
+          degree in computer science and software enginnering in june of 2013.
+          I am Now a student at code fellows where I am learning to develop
+          web applications.</p>
       </section>
 
-      <section id="myGoals">
+      <section class="subTopic" id="myGoals">
         <h3>My Goals</h3>
-          <p>Some of my goals include:</p>
-          <ul>
-            <li>Find a job in the software industry</li>
-            <li>Get married and start a family</li>
-            <li>Start my own business</li>
-            <li>Enjoy every day like it is my last</li>
-            <li>Watch the <a target="_blank" href="http://seattlemariners.com"<span id="mariners">Mariners</span></a> win the World Series!</li>
-          </ul>
+        <p>Some of my goals include:</p>
+        <ul>
+          <li>Find a job in the software industry</li>
+          <li>Get married and start a family</li>
+          <li>Start my own business</li>
+          <li>Enjoy every day like it is my last</li>
+          <li>Watch the <a target="_blank" href="http://seattlemariners.com"<span id="mariners">Mariners</span></a> win the World Series!</li>
+        </ul>
       </section>
 
-      <h2>Scroll Down for answers to game...</h2>
+      <section class="subTopic">
+        <h3>Programming Languages</h3>
+        <p>I have experience using these langugaes:</p>
+        <ul>
+          <li>Java</li>
+          <li>C++</li>
+          <li>Python</li>
+          <li>PHP</li>
+          <li>HTML/CSS</li>
+        </ul>
+      </section>
 
-      <section id ="gameAnswers">
+      <section class="subTopic">
+        <h3>Work and Education History</h3>
+        <ul>
+          <li>Work History</li>
+          <ul>
+            <li>Target Team Member (2000-2003)</li>
+            <li>Home Depot Associate (2004)</li>
+            <li>US Army (2004-2013)</li>
+            <li>Triplehorn Brewery (2014-2015)</li>
+          </ul>
+          <li>Education</li>
+          <ul>
+            <li>Woodinville Highschool (1999-2003)</li>
+            <li>Cascadia Community College (2004)</li>
+            <li>Fayetteville Tech Community College (2012)</li>
+            <li>University of Washington Bothell (2015-2016)</li>
+          </ul>
+        </ul>
+      </section>
+
+      <section class="subTopic">
+        <h3>Let's Get Personal!</h3>
+        <p>Here is a list of my top ten favorite movies. It's almost impossible to put
+          these in order!</p>
+          <ol>
+            <li>Gladiator</li>
+            <li>Blackhawk Down</li>
+            <li>Inception</li>
+            <li>Forrest Gump</li>
+            <li>Requiem For a Dream</li>
+            <li>Braveheart</li>
+            <li>The Matrix</li>
+            <li>Saving Private Ryan</li>
+            <li>Fight Club</li>
+            <li>Children of Men</li>
+          </ol>
+      </section>
+      <hr>
+      <h2 id="answerScroll">Scroll Down for answers to game...</h2>
+
+      <section class="subTopic" id ="gameAnswers">
         <h3>Guessing Game Answers</h3>
           <ol>
             <li>Do you think this is really Marc? - Yes</li>
@@ -54,6 +111,8 @@
             <li>Was I stationed in North Carolina? - Yes</li>
             <li>I deployed to Afghanistan twice! Do you believe me? - Yes</li>
             <li>Would you believe I worked in the US Embassy in El Salvador? - No</li>
+            <li>Guess a number - Answer is random</li>
+            <li>Subway sandwich - ham, lettuce, pickles, tomatoes, salt, pepper, mustard</li>
             <li><a href="./index.html">Play Again?</a></li>
           </ol>
         </section>
