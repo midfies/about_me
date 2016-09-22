@@ -61,7 +61,7 @@ while (guessesLeft !== 0){
   var guess = parseInt(prompt('Pick a number between 1 and 10! Numbers ONLY! 1 and 10 are OK guesses! You have ' + guessesLeft + ' guesses left!'));
   console.log('User Guessed: ' + guess);
   if ((guess > 10) || (guess < 1) || (isNaN(guess))) {
-    alert('I said between 1 and 10!');
+    alert('I said a number between 1 and 10!');
   } else if (guess === correctNumber){
     alert('WOW! You actually got it!');
     numCorrect++;
