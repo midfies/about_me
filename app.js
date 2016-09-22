@@ -30,87 +30,96 @@ alert('Welcome to my page! Let\'s play a game! Type \'yes\' or \'no\' to answer 
 var user = prompt('To get things started, What is your Name?');
 
 //questions 1 through 5
-for (var i = 0; i < questionArray.length; i++){
-  var answer = prompt(questionArray[i]).toLowerCase();
-  questionsAsked++;
-  if ((answer === 'y') || (answer === 'yes')){
-    if (yesAnswerArray[i].charAt(yesAnswerArray[i].length - 1) === '!'){
-      numCorrect++;
+function questionYesNo() {
+  for (var i = 0; i < questionArray.length; i++){
+    var answer = prompt(questionArray[i]).toLowerCase();
+    questionsAsked++;
+    if ((answer === 'y') || (answer === 'yes')){
+      if (yesAnswerArray[i].charAt(yesAnswerArray[i].length - 1) === '!'){
+        numCorrect++;
+      }
+      alert(yesAnswerArray[i]);
+    } else if(answer === 'n' || answer === 'no'){
+      if (noAnswerArray[i].charAt(noAnswerArray[i].length - 1) === '!'){
+        numCorrect++;
+      }
+      alert(noAnswerArray[i]);
+    } else{
+      alert(badInput);
     }
-    alert(yesAnswerArray[i]);
-  } else if(answer === 'n' || answer === 'no'){
-    if (noAnswerArray[i].charAt(noAnswerArray[i].length - 1) === '!'){
-      numCorrect++;
-    }
-    alert(noAnswerArray[i]);
-  } else{
-    alert(badInput);
+    console.log('Question ' + (i + 1) + ': ' + questionArray[i] + ' :: User Answered : ' + answer);
+    console.log(numCorrect + '/' + questionsAsked + ' answers correct');
   }
-  console.log('Question ' + (i + 1) + ': ' + questionArray[i] + ' :: User Answered : ' + answer);
-  console.log(numCorrect + '/' + questionsAsked + ' answers correct');
 }
 //  question 6 - random number guessing
-alert('You\'ve survived this far... Let\'s switch it up! How are you at guessing numbers? I\'ll give you FOUR guesses!');
-//prepar variables for Q 6
-var correctNumber = Math.floor(Math.random() * 10) + 1;
-console.log('Number to Guess is: ' + correctNumber);
-var guessesLeft = 4;
-var numbersGuessed = Array(10).fill(false);
+function questionSix() {
+  alert('You\'ve survived this far... Let\'s switch it up! How are you at guessing numbers? I\'ll give you FOUR guesses!');
+  //prepar variables for Q 6
+  var correctNumber = Math.floor(Math.random() * 10) + 1;
+  console.log('Number to Guess is: ' + correctNumber);
+  var guessesLeft = 4;
+  var numbersGuessed = Array(10).fill(false);
 
-while (guessesLeft !== 0){
-  var guess = parseInt(prompt('Pick a number between 1 and 10! Numbers ONLY! 1 and 10 are OK guesses! You have ' + guessesLeft + ' guesses left!'));
-  console.log('User Guessed: ' + guess);
-  if ((guess > 10) || (guess < 1) || (isNaN(guess))) {
-    alert('I said a number between 1 and 10!');
-  } else if (guess === correctNumber){
-    alert('WOW! You actually got it!');
-    numCorrect++;
-    break;
-  } else {
-    if (numbersGuessed[guess - 1] === true){
-      alert('You have already guessed this number!');
+  while (guessesLeft !== 0){
+    var guess = parseInt(prompt('Pick a number between 1 and 10! Numbers ONLY! 1 and 10 are OK guesses! You have ' + guessesLeft + ' guesses left!'));
+    console.log('User Guessed: ' + guess);
+    if ((guess > 10) || (guess < 1) || (isNaN(guess))) {
+      alert('I said a number between 1 and 10!');
+    } else if (guess === correctNumber){
+      alert('WOW! You actually got it!');
+      numCorrect++;
+      break;
     } else {
-      if (guess < correctNumber){
-        alert('Too Low!');
+      if (numbersGuessed[guess - 1] === true){
+        alert('You have already guessed this number!');
       } else {
-        alert('Too High!');
+        if (guess < correctNumber){
+          alert('Too Low!');
+        } else {
+          alert('Too High!');
+        }
+        numbersGuessed[guess - 1] = true;
+        guessesLeft--;
       }
-      numbersGuessed[guess - 1] = true;
+    }
+  }
+  if (guessesLeft === 0){
+    alert('BZZZZZZZZ!!!!! You Lose!!!');
+  }
+  questionsAsked++;
+  console.log(numCorrect + '/' + questionsAsked + ' answers correct');
+}
+//question 7 - guessing a value contained in a Array
+function questionSeven() {
+  alert('OK! How about some of my favorites?!');
+  guessesLeft = 6;
+  var subSandwich = ['ham', 'lettuce', 'pickles', 'tomatoes', 'salt', 'pepper', 'mustard' ];
+  console.log('Possible answers: ' + subSandwich);
+  var gotIt = false;
+  while (guessesLeft > 0){
+    var foodGuess = prompt('Can you guess what goes on my favorite Subway sandwich? You have ' + guessesLeft + ' guesses left!').toLowerCase();
+    console.log('User Guessed: ' + foodGuess);
+    for (var j = 0; j < subSandwich.length; j++){
+      if (foodGuess === subSandwich[j]){
+        numCorrect++;
+        alert('I can\'t believe you got that!');
+        guessesLeft = 0;
+        gotIt = true;
+      }
+    }
+    if (gotIt === false){
+      alert('That is incorrect. Keep Guessing!');
       guessesLeft--;
     }
   }
-}
-if (guessesLeft === 0){
-  alert('BZZZZZZZZ!!!!! You Lose!!!');
-}
-questionsAsked++;
-console.log(numCorrect + '/' + questionsAsked + ' answers correct');
-//question 7 - guessing a value contained in a Array
-alert('OK! How about some of my favorites?!');
-guessesLeft = 6;
-var subSandwich = ['ham', 'lettuce', 'pickles', 'tomatoes', 'salt', 'pepper', 'mustard' ];
-console.log('Possible answers: ' + subSandwich);
-var gotIt = false;
-while (guessesLeft > 0){
-  var foodGuess = prompt('Can you guess what goes on my favorite Subway sandwich? You have ' + guessesLeft + ' guesses left!').toLowerCase();
-  console.log('User Guessed: ' + foodGuess);
-  for (var j = 0; j < subSandwich.length; j++){
-    if (foodGuess === subSandwich[j]){
-      numCorrect++;
-      alert('I can\'t believe you got that!');
-      guessesLeft = 0;
-      gotIt = true;
-    }
-  }
-  if (gotIt === false){
-    alert('That is incorrect. Keep Guessing!');
-    guessesLeft--;
-  }
-}
 
-if ((guessesLeft === 0) && (gotIt === false)){
-  alert('You are HOPELESS!!!!! HAHAHAHA!');
+  if ((guessesLeft === 0) && (gotIt === false)){
+    alert('You are HOPELESS!!!!! HAHAHAHA!');
+  }
+  questionsAsked++;
+  console.log(numCorrect + '/' + questionsAsked + ' answers correct');
+  alert('Thanks for Playing my game ' + user + '!! You got ' + numCorrect + ' correct!');
 }
-questionsAsked++;
-console.log(numCorrect + '/' + questionsAsked + ' answers correct');
-alert('Thanks for Playing my game ' + user + '!! You got ' + numCorrect + ' correct!');
+questionYesNo();
+questionSix();
+questionSeven();
